@@ -1,0 +1,33 @@
+{
+  "name": "youtube_music",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "electron yt music app",
+  "author": "Subham das",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.subham.ytmusic",
+    "productName": "Yt_music",
+    "files": [
+      "main.js",
+      "loader.html",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "asar": true,
+    "asarUnpack": [
+      "node_modules"
+    ],
+    "forceCodeSigning": false
+  },
+  "devDependencies": {
+    "electron": "^23.0.0",
+    "electron-builder": "^23.0.0"
+  }
+}
